@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block metadescription %}
+   We have variety of sports items
+{% endblock %}
+
+{% block title %}
+  Search
+{% endblock %}
+
+{% block content %}
+<div>
+    <P class="text-center my_search_text">You have searched for: <b>"{{ query }}"</b></P>
+</div>
+<div class="container">
+    <div class="row mx-auto">
+        {% if products %}
+            {% for pro in products %}
+                <div class="my_bottom_margin col-9 col-sm-12 col-md-4  col-lg-4">
+                    <div class="card text-center" style="min-width: 18rem;">
+                        <div>
+                            <a href="{{ pro.get_url }}"><img class="" src="{{ pro.image.url }}" alt="{{ pro.name }}"></a>
+                        </div>
+                        <div class="card-body">
+                            <h4>{{ pro.name }}</h4>
+                            <p>{{ pro.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="text-center my_search_text">0 search found</p>
+            {% endfor %}
+        {% else %}
+            <p class="text-center my_search_text">No products found</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
