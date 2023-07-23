@@ -30,3 +30,5 @@ def allproductcat(request, c_slug=None):
 def product_detail(request, c_slug, product_slug):
     product = get_object_or_404(Product, category__slug=c_slug, slug=product_slug)
     return render(request, 'product.html', {'product': product})
+def hom_page(request):
+    return render(request,'mn.html')
