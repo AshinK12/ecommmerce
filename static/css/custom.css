@@ -29,7 +29,25 @@ body
 .my_footer p {
     padding-top: 20px;
     font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
+/* Assuming you want to use the 'Roboto' font */
+.card-body {
+  font-family: '#000000', sans-serif;
+}
+/* Assuming you want to use the 'Roboto' font for the heading */
+.card-body h4 {
+  font-family: '#000000', sans-serif;
+}
+
+/* Assuming you want to use a different font for the paragraph */
+.card-body p {
+  font-family: '#000000', sans-serif;
+}
+
 
 /*** ctegorypage ***/
 .my_row_class{
@@ -67,6 +85,8 @@ letter-spacing:.2em;
 
 
 /***product page ***/
+
+
 
 .my_prod_row_class
 {
@@ -116,7 +136,10 @@ letter-spacing:.2em;
     margin-top:5px;
 
  }
-
+.card {
+        min-width: 18rem;
+        /* Add other styles as needed */
+    }
 
 
 

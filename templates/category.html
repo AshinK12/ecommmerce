@@ -29,7 +29,7 @@
         </div>
         {% if category.image %}
             <div class="mx-auto">
-                <img class="my_image" src="{{ category.image.url }}" alt="{{ category.name }}">
+                <img class="my_image" src="{{ category.image.url }}" alt="{{ category.name }}" style="width:100" height="100">
             </div>
         {% else %}
             <p>No image available for this category.</p>
@@ -44,26 +44,26 @@
             <img class="my_image my_image_padding" src="{% static 'img/banner.png' %}" alt="Our Products">
         </div>
         <div>
-            <h1 class="text-center my_title">Our Product Collection</h1>
-            <p class="text-justify">Hello, it's our product collection description.</p>
+            <h1 class="text-center my_title"><b>Our Product Collection</b></h1>
+            <p class="text-justify"><b>Hello, it's our product collection description.</b></p>
         </div>
     {% endif %}
 
     <div class="container">
         <div class="row mx-auto">
             {% for pro in products %}
-                <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-lg-4">
-                    <div class="card text-center " style="min-width:18rem;">
+                <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-lg-4" >
+                    <div class="card text-center " style="min-width:18rem; " >
                         <div>
                             {% if pro.image %}
-                                <a href="{{ pro.get_url }}"><img class="product-image" src="{{ pro.image.url }}" alt="{{ pro.name }}"></a>
+                                <a href="{{ pro.get_url }}"><img class="product-image" style="width:100%; height:350px;" src="{{ pro.image.url }}" alt="{{ pro.name }}"></a>
                             {% else %}
                                 <p>No image available for Product {{ pro.name }}.</p>
                             {% endif %}
                         </div>
                         <div class="card-body">
-                            <h4>{{ pro.name }}</h4>
-                            <p>{{ pro.price }}</p>
+                             <h4 >{{ pro.name }}</h4>
+                           <p>{{ pro.price }}</p>
                         </div>
                     </div>
                 </div>
