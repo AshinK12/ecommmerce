@@ -20,19 +20,21 @@ body
 }
 
 /* Styling for the footer */
-.my_footer {
-    background-color: #f8f9fa;
-    height: 60px;
-}
+.my_footer{
 
-/* Styling for paragraphs inside the footer */
-.my_footer p {
-    padding-top: 20px;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: blue;
+   color: white;
+   text-align: center;
+}
+.my_footer p{
+    padding-top:20px;
+    font-size:14px;
+
 }
 /* Assuming you want to use the 'Roboto' font */
 .card-body {
